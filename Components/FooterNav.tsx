@@ -24,6 +24,27 @@ export default function FooterNav() {
         🗂️ Home Index
       </Link>
 
+      {/* <Link
+        href="/product/1"
+        className="text-white text-base underline mr-3 mb-2"
+      >
+        🗂️ product
+      </Link> */}
+
+      <Link
+        href={{
+            pathname: "/product/[id]",
+            params: {
+                 id: "1",
+                name: "Product 1",
+                age: 20
+            },
+        }}
+        className="text-white text-base underline mr-3 mb-2"
+      >
+        🗂️ product
+      </Link>
+
       <Link
         href="/home/test"
         className="text-white text-base underline mr-3 mb-2"

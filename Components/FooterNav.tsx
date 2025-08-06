@@ -1,55 +1,35 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { Link } from 'expo-router';
+import { View, Text } from "react-native";
+import React from "react";
+import { Link } from "expo-router";
 
- function FooterNav() {
+export default function FooterNav() {
   return (
-    <View
-      style={{
-        marginTop: 20,
-        backgroundColor: "#333",
-        paddingVertical: 15,
-        paddingHorizontal: 20,
-        borderRadius: 10,
-        flexDirection: "row",
-        justifyContent: "space-between",
-      }}
-    >
-      <Link
-        href="/"
-        style={{
-          color: "#fff",
-          fontSize: 18,
-          textDecorationLine: "underline",
-        }}
-      >
-        Go to Index
+    <View className="mt-5 bg-gray-800 py-4 px-5 rounded-xl flex-row flex-wrap justify-between">
+      <Link href="/" className="text-white text-base underline mr-3 mb-2">
+        🏠 Index
       </Link>
+
       <Link
         href="/profile"
-        style={{
-          color: "#fff",
-          fontSize: 18,
-          textDecorationLine: "underline",
-        }}
+        className="text-white text-base underline mr-3 mb-2"
       >
-        Go to Profile
+        👤 Profile
+      </Link>
+
+      <Link href="/login" className="text-white text-base underline mr-3 mb-2">
+        🔐 Login
+      </Link>
+
+      <Link href="/home/" className="text-white text-base underline mr-3 mb-2">
+        🗂️ Home Index
       </Link>
 
       <Link
-        href="/login"
-        style={{
-          color: "#fff",
-          fontSize: 18,
-          textDecorationLine: "underline",
-        }}
+        href="/home/test"
+        className="text-white text-base underline mr-3 mb-2"
       >
-        login
+        🧪 Test
       </Link>
     </View>
   );
 }
-
-const styles = StyleSheet.create({})
-
-export default FooterNav;

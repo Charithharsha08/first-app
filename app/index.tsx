@@ -31,6 +31,7 @@ const Index = () => {
         <Text className="text-white text-lg font-medium bg-blue-500" >
         This is a text with Nativewind class
       </Text>
+      <Text className = "text-white "> check this </Text>
       
       
     </View>
